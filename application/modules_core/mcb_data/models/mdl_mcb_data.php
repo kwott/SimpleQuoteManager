@@ -2,86 +2,86 @@
 
 class Mdl_MCB_Data extends MY_Model {
 
-	public $settings;
+    public $settings;
 
-	public function get($key) {
+    public function get($key) {
 
-		$this->db->select('mcb_value');
+        $this->db->select('mcb_value');
 
-		$this->db->where('mcb_key', $key);
+        $this->db->where('mcb_key', $key);
 
-		$query = $this->db->get('mcb_data');
+        $query = $this->db->get('mcb_data');
 
-		if ($query->row()) {
+        if ($query->row()) {
 
-			return $query->row()->mcb_value;
+            return $query->row()->mcb_value;
 
-		}
+        }
 
-		else {
+        else {
 
-			return NULL;
+            return NULL;
 
-		}
+        }
 
-	}
+    }
 
-	public function save($key, $value, $only_if_null = FALSE) {
+    public function save($key, $value, $only_if_null = FALSE) {
 
-		if (!is_null($this->get($key)) and !$only_if_null) {
+        if (!is_null($this->get($key)) and !$only_if_null) {
 
-			$this->db->where('mcb_key', $key);
+            $this->db->where('mcb_key', $key);
 
-			$db_array = array(
-				'mcb_value'	=>	$value
-			);
+            $db_array = array(
+                'mcb_value' =>  $value
+            );
 
-			$this->db->update('mcb_data', $db_array);
+            $this->db->update('mcb_data', $db_array);
 
-		}
+        }
 
-		else {
+        else {
 
-			if ($only_if_null) {
+            if ($only_if_null) {
 
-				if (!is_null($this->get($key))) {
+                if (!is_null($this->get($key))) {
 
-					return;
+                    return;
 
-				}
+                }
 
-			}
+            }
 
-			$db_array = array(
-				'mcb_key'	=>	$key,
-				'mcb_value'	=>	$value
-			);
+            $db_array = array(
+                'mcb_key'   =>  $key,
+                'mcb_value' =>  $value
+            );
 
-			$this->db->insert('mcb_data', $db_array);
+            $this->db->insert('mcb_data', $db_array);
 
-		}
+        }
 
-	}
+    }
 
-	public function delete($key) {
+    public function delete($key) {
 
-		$this->db->where('mcb_key', $key);
+        $this->db->where('mcb_key', $key);
 
-		$this->db->delete('mcb_data');
+        $this->db->delete('mcb_data');
 
-	}
+    }
 
-	public function set_session_data() {
+    public function set_session_data() {
 
-		$mcb_data = $this->db->get('mcb_data')->result();
+        $mcb_data = $this->db->get('mcb_data')->result();
 
-		foreach ($mcb_data as $data) {
+        foreach ($mcb_data as $data) {
 
-			$this->settings->{$data->mcb_key} = $data->mcb_value;
+            $this->settings->{$data->mcb_key} = $data->mcb_value;
 
-		}
+        }
 
-	}
+    }
 
     public function set_application_title() {
 
@@ -89,11 +89,11 @@ class Mdl_MCB_Data extends MY_Model {
 
     }
 
-	public function setting($key) {
+    public function setting($key) {
 
-		return (isset($this->settings->$key)) ? $this->settings->$key : NULL;
+        return (isset($this->settings->$key)) ? $this->settings->$key : NULL;
 
-	}
+    }
 
     public function set_setting($key, $value) {
 
