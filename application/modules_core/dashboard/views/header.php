@@ -13,7 +13,7 @@
                 <script src="<?php echo base_url(); ?>assets/jquery/jquery.maskedinput-1.2.2.min.js" type="text/javascript"></script>
                 <script src="<?php echo base_url(); ?>assets/jquery/superfish.js" type="text/javascript"></script>
                 <script src="<?php echo base_url(); ?>assets/jquery/supersubs.js" type="text/javascript"></script>
-                <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
         <script>
 
             $(document).ready(function(){
