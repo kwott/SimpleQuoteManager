@@ -74,6 +74,9 @@ class Mdl_MCB_Data extends MY_Model {
     public function set_session_data() {
 
         $mcb_data = $this->db->get('mcb_data')->result();
+        if (!isset($this->settings)) {
+            $this->settings = new stdClass();
+        }
 
         foreach ($mcb_data as $data) {
 
