@@ -19,13 +19,19 @@ module.exports = function (grunt) {
             Gruntfile: {
                 src: ['Gruntfile.js']
             }
+        },
+        csslint: {
+            css: {
+                src: ['assets/style/css/*.css']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jslint');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
 
     grunt.registerTask('default', ['cssmin']);
-    grunt.registerTask('lint', ['jslint']);
+    grunt.registerTask('lint', ['jslint', 'csslint']);
 };
