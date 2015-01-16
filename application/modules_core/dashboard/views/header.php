@@ -1,3 +1,17 @@
+<?php
+/**
+ * Header used on most pages
+ *
+ * PHP Version 5.4
+ *
+ * @category Locale
+ * @package  SimpleQuoteManager
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @author   Damien Senger <mail@damiensenger.me>
+ * @license  GPL-3.0 http://www.gnu.org/licenses/gpl.html
+ * @link     https://github.com/kwott/SimpleQuoteManager
+ * */
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
@@ -29,7 +43,15 @@
 
         </script>
 
-                <?php if (isset($header_insert)) { if (!is_array($header_insert)) { $this->load->view($header_insert); } else { foreach ($header_insert as $insert) { $this->load->view($insert); } } } ?>
+<?php if (isset($header_insert)) {
+    if (!is_array($header_insert)) {
+        $this->load->view($header_insert);
+    } else {
+        foreach ($header_insert as $insert) {
+            $this->load->view($insert);
+        }
+    }
+} ?>
 
         </head>
         <body>
@@ -48,7 +70,9 @@
 
                         <ul class="sf-menu" id="navigation">
 
-                <?php echo modules::run('mcb_menu/display', array('view'=>'dashboard/header_menu')); ?>
+<?php echo modules::run(
+    'mcb_menu/display', array('view'=>'dashboard/header_menu')
+); ?>
 
                         </ul>
 
