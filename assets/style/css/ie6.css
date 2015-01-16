@@ -7,13 +7,13 @@
 #main fieldset p { margin: 0 0 7px 0; } /* half of the normal bottom margin */
 
 .jNiceSelectWrapper ul {
-	height: 99px;
+    height: 99px;
 }
 
 .jNiceSelectWrapper div span {
-	padding: 9px 7px 0;
+    padding: 9px 7px 0;
 }
 
 button {
-	width: 85px;
+    width: 85px;
 }
