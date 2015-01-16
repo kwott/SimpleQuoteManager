@@ -2,53 +2,51 @@
 
 class Calendar extends Admin_Controller {
 
-	function __construct() {
+    function __construct() {
 
-		parent::__construct();
+        parent::__construct();
 
-		if ($this->input->post('btn_list_view')) {
+        if ($this->input->post('btn_list_view')) {
 
-			redirect('invoices');
+            redirect('invoices');
 
-		}
+        }
 
-		elseif ($this->input->post('btn_add_invoice')) {
+        elseif ($this->input->post('btn_add_invoice')) {
 
-			redirect('invoices/create');
+            redirect('invoices/create');
 
-		}
+        }
 
-		$this->load->model('invoices/mdl_invoices');
+        $this->load->model('invoices/mdl_invoices');
 
-	}
+    }
 
-	function index() {
+    function index() {
 
-		$this->load->view('index');
+        $this->load->view('index');
 
-	}
+    }
 
-	public function jquery_get_invoices($status = 'open') {
+    public function jquery_get_invoices($status = 'open') {
 
-		$function = "get_" . $status;
+        $function = "get_" . $status;
 
-		$invoices = $this->mdl_invoices->$function();
+        $invoices = $this->mdl_invoices->$function();
 
-		$inv_array = array();
+        $inv_array = array();
 
-		foreach ($invoices as $invoice) {
-			
-			$inv_array[] = array(
-				'id'    => $invoice->invoice_id,
-				'title' => $invoice->client_name . ' (' . display_currency($invoice->invoice_total) . ')',
-				'start' => date('Y-m-d', $invoice->invoice_due_date),
-				'url'   => './invoices/edit/invoice_id/'. $invoice->invoice_id,
-			);
+        foreach ($invoices as $invoice) {
+            $inv_array[] = array(
+                'id'    => $invoice->invoice_id,
+                'title' => $invoice->client_name . ' (' . display_currency($invoice->invoice_total) . ')',
+                'start' => date('Y-m-d', $invoice->invoice_due_date),
+                'url'   => './invoices/edit/invoice_id/'. $invoice->invoice_id,
+            );
 
-		}
+        }
 
-		echo json_encode($inv_array);
-		
-	}
+        echo json_encode($inv_array);
+    }
 
 }
