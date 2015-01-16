@@ -40,7 +40,7 @@ class Calendar extends Admin_Controller {
             $inv_array[] = array(
                 'id'    => $invoice->invoice_id,
                 'title' => $invoice->client_name . ' (' . display_currency($invoice->invoice_total) . ')',
-                'start' => date('Y-m-d', $invoice->invoice_due_date),
+                'start' => date('Y-m-d', $invoice->invoice_date_entered),
                 'url'   => './invoices/edit/invoice_id/'. $invoice->invoice_id,
             );
 
