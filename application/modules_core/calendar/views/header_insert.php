@@ -1,7 +1,27 @@
-<link rel='stylesheet' type='text/css' href='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.css' />
-<link rel='stylesheet' type='text/css' href='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.print.css' media='print' />
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.min.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/jquery/fullcalendar/gcal.js'></script>
+<?php
+/**
+ * Calendar view header
+ *
+ * PHP Version 5.4
+ *
+ * @category Controller
+ * @package  SimpleQuoteManager
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @author   Damien Senger <mail@damiensenger.me>
+ * @license  GPL-3.0 http://www.gnu.org/licenses/gpl.html
+ * @link     https://github.com/kwott/SimpleQuoteManager
+ * */
+?>
+<link rel='stylesheet' type='text/css'
+    href='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.css' />
+<link rel='stylesheet' type='text/css'
+    href='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.print.css'
+    media='print' />
+<script type='text/javascript'
+    src='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.min.js'>
+</script>
+<script type='text/javascript'
+    src='<?php echo base_url(); ?>assets/jquery/fullcalendar/gcal.js'></script>
 <?php print_r($this->lang->line('buttonArr')); ?>
 
 <script type='text/javascript'>
@@ -14,43 +34,44 @@
                 center: 'title',
                 right: 'month,basicWeek,basicDay'
             },
-<?php if($this->lang->line('calendarToday')){ ?>
+<?php if ($this->lang->line('calendarToday')) { ?>
             buttonText: {
                 today: '<?php echo $this->lang->line('calendarToday'); ?>',
                 day: '<?php echo $this->lang->line('calendarDay'); ?>',
                 week:'<?php echo $this->lang->line('calendarWeek'); ?>',
                 month:'<?php echo $this->lang->line('calendarMonth'); ?>'
             },
-<?php }
+    <?php
+}
 
-    if($this->lang->line('months')) {
-        echo "monthNames: [";
-        foreach($this->lang->line('months') as $month){
-            echo '"' . $month . '",';
-        }
-        echo "],";
+if ($this->lang->line('months')) {
+    echo "monthNames: [";
+    foreach ($this->lang->line('months') as $month) {
+        echo '"' . $month . '",';
     }
-    if($this->lang->line('monthsShort')) {
-        echo "monthNamesShort: [";
-        foreach($this->lang->line('monthsShort') as $monthShort) {
-            echo '"' . $monthShort .'",';
-        }
-        echo "],";
+    echo "],";
+}
+if ($this->lang->line('monthsShort')) {
+    echo "monthNamesShort: [";
+    foreach ($this->lang->line('monthsShort') as $monthShort) {
+        echo '"' . $monthShort .'",';
     }
-    if($this->lang->line('days')) {
-        echo "dayNames: [";
-        foreach($this->lang->line('days') as $day) {
-            echo '"' . $day .'",';
-        }
-        echo "],";
+    echo "],";
+}
+if ($this->lang->line('days')) {
+    echo "dayNames: [";
+    foreach ($this->lang->line('days') as $day) {
+        echo '"' . $day .'",';
     }
-    if($this->lang->line('daysShort')) {
-        echo "dayNamesShort: [";
-        foreach($this->lang->line('daysShort') as $dayShort) {
-            echo '"' . $dayShort .'",';
-        }
-        echo "],";
+    echo "],";
+}
+if ($this->lang->line('daysShort')) {
+    echo "dayNamesShort: [";
+    foreach ($this->lang->line('daysShort') as $dayShort) {
+        echo '"' . $dayShort .'",';
     }
+    echo "],";
+}
 
 ?>
 
@@ -60,17 +81,17 @@
             eventSources:[
 
                 {
-                    url: "calendar/jquery_get_invoices/overdue",
+                    url: "calendar/jquerygetinvoices/overdue",
           color: 'red',
           textColor: 'white'
                 },
                 {
-                    url: "calendar/jquery_get_invoices/open",
+                    url: "calendar/jquerygetinvoices/open",
                     color: 'blue',
                     textColor: 'white'
                 },
                 {
-                    url: "calendar/jquery_get_invoices/quotes",
+                    url: "calendar/jquerygetinvoices/quotes",
                     color: 'green',
                     textColor: 'white'
                 },
