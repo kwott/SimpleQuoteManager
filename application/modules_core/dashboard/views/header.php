@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <title><?php echo application_title(); ?></title>
+                <title><?php echo application_title(), ' - ', $this->lang->line($this->_module); ?></title>
                 <link href="<?php echo base_url(); ?>assets/style/dist/main.css" rel="stylesheet" type="text/css" media="screen" />
                 <link href="<?php echo base_url(); ?>assets/style/css/superfish.css" rel="stylesheet" type="text/css" media="screen" />
                 <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/style/css/ie6.css" /><![endif]-->
