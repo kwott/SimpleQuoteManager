@@ -4,7 +4,13 @@
 **SimpleQuoteManager** is a simple, intuitive, free and open source web based invoice management system developed with freelancers in mind.
 
 ##Installation
-You need to create the config files:
+You first need to use Bower and Grunt:
+
+    bower install
+    npm install
+    grunt
+
+You then need to create the config files:
 
     cp application/config/config.example.php application/config/config.php
     cp application/config/database.example.php application/config/database.php

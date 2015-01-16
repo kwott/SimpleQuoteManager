@@ -1,0 +1,6 @@
+{
+    "name": "SimpleQuoteManager",
+    "dependencies": {
+        "jquery": "~1.6.2"
+    }
+}

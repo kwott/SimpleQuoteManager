@@ -6,3 +6,6 @@ system/config/database.php
 */cache/!index.html
 application/config/database.php
 application/config/config.php
+bower_components/
+node_modules/
+assets/style/dist/
