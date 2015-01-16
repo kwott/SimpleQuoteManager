@@ -6,127 +6,100 @@
 
 <script type='text/javascript'>
 
-	$(document).ready(function() {
+    $(document).ready(function() {
 
-		$('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,basicWeek,basicDay'
-			},
-<?php if($this->lang->line('calendarToday')){ ?> 			
-			
-			buttonText: {
-				today: '<?php echo $this->lang->line('calendarToday'); ?>',
-				day: '<?php echo $this->lang->line('calendarDay'); ?>',
-				week:'<?php echo $this->lang->line('calendarWeek'); ?>',
-				month:'<?php echo $this->lang->line('calendarMonth'); ?>'
-			},
-			
-<?php }	
-				
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+<?php if($this->lang->line('calendarToday')){ ?>
+            buttonText: {
+                today: '<?php echo $this->lang->line('calendarToday'); ?>',
+                day: '<?php echo $this->lang->line('calendarDay'); ?>',
+                week:'<?php echo $this->lang->line('calendarWeek'); ?>',
+                month:'<?php echo $this->lang->line('calendarMonth'); ?>'
+            },
+<?php }
 
-	if($this->lang->line('months')) {
-		
-		echo "monthNames: [";
-		
-		foreach($this->lang->line('months') as $month){
-			
-			echo '"' . $month . '",';
-		
-		}
-	
-		echo "],";
-	}
-	
-	if($this->lang->line('monthsShort')) {
-		
-		echo "monthNamesShort: [";
-		
-		foreach($this->lang->line('monthsShort') as $monthShort) {
-			
-			echo '"' . $monthShort .'",';
-		}
-		
-		echo "],";
-	
-	}					
-	
-	if($this->lang->line('days')) {
-		
-		echo "dayNames: [";
-		
-		foreach($this->lang->line('days') as $day) {
-			
-			echo '"' . $day .'",';
-		}
-		
-		echo "],";
-	
-	}			
-	if($this->lang->line('daysShort')) {
-		
-		echo "dayNamesShort: [";
-		
-		foreach($this->lang->line('daysShort') as $dayShort) {
-			
-			echo '"' . $dayShort .'",';
-		}
-		
-		echo "],";
-	
-	}	
+    if($this->lang->line('months')) {
+        echo "monthNames: [";
+        foreach($this->lang->line('months') as $month){
+            echo '"' . $month . '",';
+        }
+        echo "],";
+    }
+    if($this->lang->line('monthsShort')) {
+        echo "monthNamesShort: [";
+        foreach($this->lang->line('monthsShort') as $monthShort) {
+            echo '"' . $monthShort .'",';
+        }
+        echo "],";
+    }
+    if($this->lang->line('days')) {
+        echo "dayNames: [";
+        foreach($this->lang->line('days') as $day) {
+            echo '"' . $day .'",';
+        }
+        echo "],";
+    }
+    if($this->lang->line('daysShort')) {
+        echo "dayNamesShort: [";
+        foreach($this->lang->line('daysShort') as $dayShort) {
+            echo '"' . $dayShort .'",';
+        }
+        echo "],";
+    }
 
-	
 ?>
 
-			editable: false,
+            editable: false,
 
-			height: 350,
-			
-			eventSources:[
+            height: 350,
+            eventSources:[
 
-				{
-					url: "calendar/jquery_get_invoices/overdue",
+                {
+                    url: "calendar/jquery_get_invoices/overdue",
           color: 'red',
           textColor: 'white'
-				},
-				{
-					url: "calendar/jquery_get_invoices/open",
-					color: 'blue',
-					textColor: 'white'
-				},
-				{
-					url: "calendar/jquery_get_invoices/quotes",
-					color: 'green',
-					textColor: 'white'
-				},				
+                },
+                {
+                    url: "calendar/jquery_get_invoices/open",
+                    color: 'blue',
+                    textColor: 'white'
+                },
+                {
+                    url: "calendar/jquery_get_invoices/quotes",
+                    color: 'green',
+                    textColor: 'white'
+                },
 
 
-			],
+            ],
 
-			loading: function(bool) {
-				if (bool) $('#loading').show();
-				else $('#loading').hide();
-			}
+            loading: function(bool) {
+                if (bool) $('#loading').show();
+                else $('#loading').hide();
+            }
 
-		});
+        });
 
-	});
+    });
 
 </script>
 
 <style type='text/css'>
 
-	#loading {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		}
+    #loading {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        }
 
-	#calendar {
-		width: 900px;
-		margin: 0 auto;
-		}
+    #calendar {
+        width: 900px;
+        margin: 0 auto;
+        }
 
 </style>
