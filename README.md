@@ -16,6 +16,7 @@ You then need to create the config files:
 
     cp application/config/config.example.php application/config/config.php
     cp application/config/database.example.php application/config/database.php
+    cp application/modules_core/mcb_menu/config/mcb_menu.example.php application/modules_core/mcb_menu/config/mcb_menu.php
 
 Then edit these files according to your needs.
 
