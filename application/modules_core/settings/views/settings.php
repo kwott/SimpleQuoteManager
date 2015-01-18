@@ -54,7 +54,7 @@
                         </dl>
                         <dl>
                             <dt><?php echo $this->lang->line('application_title'); ?>: </dt>
-                            <dd><input type="text" name="application_title" value="<?php echo application_title(); ?>" /></dd>
+                            <dd><input type="text" name="application_title" value="<?php echo applicationTitle(); ?>" /></dd>
                         </dl>
                     </div>
 
