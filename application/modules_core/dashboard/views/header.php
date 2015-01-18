@@ -4,7 +4,7 @@
  *
  * PHP Version 5.4
  *
- * @category Locale
+ * @category View
  * @package  SimpleQuoteManager
  * @author   Pierre Rudloff <contact@rudloff.pro>
  * @author   Damien Senger <mail@damiensenger.me>
@@ -17,7 +17,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title><?php echo application_title(),
+            <title><?php echo applicationTitle(),
                 ' - ', $this->lang->line($this->_module); ?></title>
             <link href="<?php echo base_url(); ?>assets/style/dist/main.css"
                 rel="stylesheet" type="text/css" media="screen" />
@@ -83,8 +83,8 @@
                         <div class="container_10" id="header_content">
 
                                 <h1><img
-                                    src="<?php echo application_logo(); ?>"
-                                    alt="<?php echo application_title(); ?>" /></h1>
+                                    src="<?php echo applicationLogo(); ?>"
+                                    alt="<?php echo applicationTitle(); ?>" /></h1>
 
                         </div>
 

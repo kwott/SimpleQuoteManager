@@ -1,14 +1,43 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/**
+ * Helper to access some general settings
+ *
+ * PHP Version 5.4
+ *
+ * @category Helper
+ * @package  SimpleQuoteManager
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @author   Damien Senger <mail@damiensenger.me>
+ * @license  GPL-3.0 http://www.gnu.org/licenses/gpl.html
+ * @link     https://github.com/kwott/SimpleQuoteManager
+ * */
+if ( ! defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
-function application_title() {
+/**
+ * Return the application title
+ *
+ * @return string Application title
+ * */
+function applicationTitle()
+{
 
     $CI =& get_instance();
 
-    return ($CI->mdl_mcb_data->setting('application_title')) ? $CI->mdl_mcb_data->setting('application_title') : $CI->lang->line('myclientbase');
+    return ($CI->mdl_mcb_data->setting('application_title'))
+        ? $CI->mdl_mcb_data->setting('application_title')
+        : $CI->lang->line('myclientbase');
 
 }
 
-function application_logo() {
+/**
+ * Return the application logo
+ *
+ * @return string Application logo URL
+ * */
+function applicationLogo()
+{
     global $CFG;
     return base_url().$CFG->item('application_logo');
 }

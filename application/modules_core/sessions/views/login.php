@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title><?php echo application_title(); ?></title>
+        <title><?php echo applicationTitle(); ?></title>
         <link href="<?php echo base_url(); ?>assets/style/dist/main.css" rel="stylesheet" type="text/css" media="screen" />
         <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/style/css/ie6.css" /><![endif]-->
         <!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/style/css/ie7.css" /><![endif]-->
@@ -20,7 +20,7 @@
 
                 <div class="section_wrapper">
 
-                    <h3 class="title_black"><?php echo application_title() . ' ' . $this->lang->line('log_in'); ?></h3>
+                    <h3 class="title_black"><?php echo applicationTitle() . ' ' . $this->lang->line('log_in'); ?></h3>
 
                     <?php $this->load->view('dashboard/system_messages'); ?>
 
