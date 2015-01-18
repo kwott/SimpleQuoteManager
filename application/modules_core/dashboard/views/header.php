@@ -39,7 +39,7 @@
             </script>
             <script type="text/javascript"
                 src="<?php echo base_url();
-                ?>assets/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+                ?>bower_components/jquery-ui/jquery-ui.min.js"></script>
             <script src="<?php echo base_url();
                 ?>assets/jquery/jquery.maskedinput-1.2.2.min.js"
                 type="text/javascript"></script>
