@@ -1,7 +1,7 @@
 {
     "name": "SimpleQuoteManager",
     "dependencies": {
-        "jquery": "~1.8.1",
+        "jquery": "~1.11",
         "jquery-ui": "~1.11",
         "superfish": "~1.5.0",
         "fullcalendar": "~2.2.6",
