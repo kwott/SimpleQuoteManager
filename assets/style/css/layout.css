@@ -104,6 +104,9 @@ table th {
     padding: 0 10px;
     text-align: left;
 }
+.fc table {
+    margin-bottom:0;
+}
 tr.hoverall:hover {background:#EFEFEF;}
 .quicklinks {
     padding-top: 0 !important;

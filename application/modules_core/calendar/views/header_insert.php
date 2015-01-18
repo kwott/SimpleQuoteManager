@@ -13,15 +13,18 @@
  * */
 ?>
 <link rel='stylesheet' type='text/css'
-    href='<?php echo base_url(); ?>bower_components/fullcalendar/fullcalendar.css' />
+    href='<?php echo base_url(); ?>bower_components/fullcalendar/dist/fullcalendar.min.css' />
 <link rel='stylesheet' type='text/css'
-    href='<?php echo base_url(); ?>bower_components/fullcalendar/fullcalendar.print.css'
+    href='<?php echo base_url(); ?>bower_components/fullcalendar/dist/fullcalendar.print.css'
     media='print' />
 <script type='text/javascript'
-    src='<?php echo base_url(); ?>bower_components/fullcalendar/fullcalendar.min.js'>
+    src='<?php echo base_url(); ?>bower_components/moment/min/moment.min.js'>
 </script>
 <script type='text/javascript'
-    src='<?php echo base_url(); ?>bower_components/fullcalendar/gcal.js'></script>
+    src='<?php echo base_url(); ?>bower_components/fullcalendar/dist/fullcalendar.min.js'>
+</script>
+<script type='text/javascript'
+    src='<?php echo base_url(); ?>bower_components/fullcalendar/dist/gcal.js'></script>
 <?php print_r($this->lang->line('buttonArr')); ?>
 
 <script type='text/javascript'>
@@ -77,7 +80,6 @@ if ($this->lang->line('daysShort')) {
 
             editable: false,
 
-            height: 350,
             eventSources:[
 
                 {
