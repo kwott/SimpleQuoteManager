@@ -21,7 +21,7 @@
 
                 <div class="section_wrapper">
 
-                    <h3 class="title_black"><?php echo applicationTitle() . ' ' . $this->lang->line('password_recovery'); ?></h3>
+                    <h3 class="title_black"><?php echo applicationTitle() . ' - ' . $this->lang->line('password_recovery'); ?></h3>
 
                     <?php $this->load->view('dashboard/system_messages'); ?>
 
