@@ -82,7 +82,9 @@
 
                         <div class="container_10" id="header_content">
 
-                                <h1><?php echo application_title(); ?></h1>
+                                <h1><img
+                                    src="<?php echo $application_logo; ?>"
+                                    alt="<?php echo application_title(); ?>" /></h1>
 
                         </div>
 

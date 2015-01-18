@@ -358,5 +358,16 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+|--------------------------------------------------------------------------
+| Application logo
+|--------------------------------------------------------------------------
+|
+| URL to the application logo.
+|
+*/
+$config['application_logo'] = 'assets/style/img/logo-sqm/logo-sqm-175-75.png';
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
