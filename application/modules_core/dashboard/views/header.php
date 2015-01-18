@@ -41,7 +41,7 @@
                 src="<?php echo base_url();
                 ?>bower_components/jquery-ui/jquery-ui.min.js"></script>
             <script src="<?php echo base_url();
-                ?>assets/jquery/jquery.maskedinput-1.2.2.min.js"
+                ?>bower_components/jquery-maskedinput/src/jquery.maskedinput.js"
                 type="text/javascript"></script>
             <script src="<?php echo base_url(); ?>assets/jquery/superfish.js"
                 type="text/javascript"></script>
