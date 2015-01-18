@@ -421,10 +421,14 @@ $lang['overdue'] = 'En retard';
 $lang['receipt_as_body'] = 'Reçu comme corps';
 
 /* NEW FOR 0.9.2 */
-/** Changed: $lang['default_tax_rate'] = "Default Tax Rate"; */
+/**
+ * Changed: $lang['default_tax_rate'] = "Default Tax Rate";
+*/
 $lang['default_invoice_tax_rate'] = 'Taxe par défaut';
 
-/** Changed: $lang['pdf_plugin'] = "PDF Plugin"; */
+/**
+ * Changed: $lang['pdf_plugin'] = "PDF Plugin";
+*/
 $lang['pdf_helper'] = 'Bibliothèque PDF';
 
 /* NEW FOR 0.9.4 */
