@@ -13,15 +13,15 @@
  * */
 ?>
 <link rel='stylesheet' type='text/css'
-    href='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.css' />
+    href='<?php echo base_url(); ?>bower_components/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' type='text/css'
-    href='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.print.css'
+    href='<?php echo base_url(); ?>bower_components/fullcalendar/fullcalendar.print.css'
     media='print' />
 <script type='text/javascript'
-    src='<?php echo base_url(); ?>assets/jquery/fullcalendar/fullcalendar.min.js'>
+    src='<?php echo base_url(); ?>bower_components/fullcalendar/fullcalendar.min.js'>
 </script>
 <script type='text/javascript'
-    src='<?php echo base_url(); ?>assets/jquery/fullcalendar/gcal.js'></script>
+    src='<?php echo base_url(); ?>bower_components/fullcalendar/gcal.js'></script>
 <?php print_r($this->lang->line('buttonArr')); ?>
 
 <script type='text/javascript'>
