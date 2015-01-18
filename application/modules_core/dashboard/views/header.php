@@ -43,9 +43,11 @@
             <script src="<?php echo base_url();
                 ?>bower_components/jquery-maskedinput/src/jquery.maskedinput.js"
                 type="text/javascript"></script>
-            <script src="<?php echo base_url(); ?>assets/jquery/superfish.js"
+            <script src="<?php echo base_url();
+                ?>bower_components/superfish/js/superfish.js"
                 type="text/javascript"></script>
-            <script src="<?php echo base_url(); ?>assets/jquery/supersubs.js"
+            <script src="<?php echo base_url();
+                ?>bower_components/superfish/js/supersubs.js"
                 type="text/javascript"></script>
             <link href='https://fonts.googleapis.com/css?family=Open+Sans'
                 rel='stylesheet' type='text/css' />
