@@ -6,13 +6,13 @@ module.exports = function (grunt) {
             cssmin: {
                 combine: {
                     files: {
-                        'assets/style/dist/main.css': ['assets/style/css/reset.css', 'assets/style/css/layout.css', 'assets/style/css/general.css', 'assets/style/css/grid.css', 'assets/style/css/messages.css', 'assets/style/css/pagination.css']
+                        'themes/sqm/css/main.css': ['themes/sqm/css/reset.css', 'themes/sqm/css/layout.css', 'themes/sqm/css/general.css', 'themes/sqm/css/grid.css', 'themes/sqm/css/messages.css', 'themes/sqm/css/pagination.css']
                     }
                 }
             },
             watch: {
                 styles: {
-                    files: ['assets/style/css/*.css'],
+                    files: ['themes/sqm/css/*.css'],
                     tasks: ['cssmin']
                 }
             },
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
             },
             csslint: {
                 css: {
-                    src: ['assets/style/css/*.css']
+                    src: ['themes/sqm/css/*.css']
                 }
             }
         }

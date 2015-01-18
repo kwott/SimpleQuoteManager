@@ -18,7 +18,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <title><?php echo applicationTitle(),
                 ' - ', $this->lang->line($this->_module); ?></title>
-            <link href="<?php echo base_url(); ?>assets/style/dist/main.css"
+            <link href="<?php echo themeFolder(); ?>/css/main.css"
                 rel="stylesheet" type="text/css" media="screen" />
             <link href="<?php echo base_url(); ?>assets/style/css/superfish.css"
                 rel="stylesheet" type="text/css" media="screen" />

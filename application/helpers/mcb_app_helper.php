@@ -53,5 +53,16 @@ function favicon()
     return base_url().$CFG->item('favicon');
 }
 
+/**
+ * Return the theme folder
+ *
+ * @return string Theme folder URL
+ * */
+function themeFolder()
+{
+    global $CFG;
+    return base_url().'themes/'.$CFG->item('theme');
+}
+
 
 ?>

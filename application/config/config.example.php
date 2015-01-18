@@ -399,5 +399,16 @@ $config['application_logo'] = 'assets/style/img/logo-sqm/logo-sqm-175-75.png';
 $config['favicon'] = 'assets/style/img/logo-sqm/favicon.png';
 
 
+/*
+|--------------------------------------------------------------------------
+| Theme
+|--------------------------------------------------------------------------
+|
+| Name of the theme folder.
+|
+*/
+$config['theme'] = 'sqm';
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
