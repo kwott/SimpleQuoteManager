@@ -372,5 +372,16 @@ $config['proxy_ips'] = '';
 $config['application_logo'] = 'assets/style/img/logo-sqm/logo-sqm-175-75.png';
 
 
+/*
+|--------------------------------------------------------------------------
+| Favicon
+|--------------------------------------------------------------------------
+|
+| URL to the favicon.
+|
+*/
+$config['favicon'] = 'assets/style/img/logo-sqm/favicon.png';
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

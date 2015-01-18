@@ -42,4 +42,16 @@ function applicationLogo()
     return base_url().$CFG->item('application_logo');
 }
 
+/**
+ * Return the favicon
+ *
+ * @return string Favicon URL
+ * */
+function favicon()
+{
+    global $CFG;
+    return base_url().$CFG->item('favicon');
+}
+
+
 ?>
