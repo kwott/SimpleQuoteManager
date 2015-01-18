@@ -1,4 +1,20 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/**
+ * English locale
+ *
+ * PHP Version 5.4
+ *
+ * @category Locale
+ * @package  SimpleQuoteManager
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @author   Damien Senger <mail@damiensenger.me>
+ * @license  GPL-3.0 http://www.gnu.org/licenses/gpl.html
+ * @link     https://github.com/kwott/SimpleQuoteManager
+ * */
+
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 $lang['actions'] = 'Actions';
 $lang['active_client'] = 'Active Client';
@@ -365,10 +381,14 @@ $lang['overdue'] = 'Overdue';
 $lang['receipt_as_body'] = 'Receipt as Body';
 
 /* NEW FOR 0.9.2 */
-/** Changed: $lang['default_tax_rate'] = "Default Tax Rate"; */
+/**
+ * Changed: $lang['default_tax_rate'] = "Default Tax Rate";
+*/
 $lang['default_invoice_tax_rate'] = 'Default Invoice Tax Rate';
 
-/** Changed: $lang['pdf_plugin'] = "PDF Plugin"; */
+/**
+ * Changed: $lang['pdf_plugin'] = "PDF Plugin";
+*/
 $lang['pdf_helper'] = 'PDF Helper';
 
 /* NEW FOR 0.9.4 */
