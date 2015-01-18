@@ -1,4 +1,16 @@
 <?php
+/**
+ * Main Index
+ *
+ * PHP Version 5.4
+ *
+ * @category Index
+ * @package  SimpleQuoteManager
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @author   Damien Senger <mail@damiensenger.me>
+ * @license  GPL-3.0 http://www.gnu.org/licenses/gpl.html
+ * @link     https://github.com/kwott/SimpleQuoteManager
+ * */
 
 /*
  *---------------------------------------------------------------
@@ -28,21 +40,20 @@
  * By default development will show errors but testing and live will hide them.
  */
 
-if (defined('ENVIRONMENT'))
-{
+if (defined('ENVIRONMENT')) {
     switch (ENVIRONMENT)
     {
-        case 'development':
-            error_reporting(E_ALL);
+    case 'development':
+        error_reporting(E_ALL);
         break;
     
-        case 'testing':
-        case 'production':
-            error_reporting(0);
+    case 'testing':
+    case 'production':
+        error_reporting(0);
         break;
 
-        default:
-            exit('The application environment is not set correctly.');
+    default:
+        exit('The application environment is not set correctly.');
     }
 }
 
@@ -135,24 +146,25 @@ if (defined('ENVIRONMENT'))
  */
 
     // Set the current directory correctly for CLI requests
-    if (defined('STDIN'))
-    {
-        chdir(dirname(__FILE__));
-    }
+if (defined('STDIN')) {
+    chdir(dirname(__FILE__));
+}
 
-    if (realpath($system_path) !== FALSE)
-    {
-        $system_path = realpath($system_path).'/';
-    }
+if (realpath($system_path) !== false) {
+    $system_path = realpath($system_path).'/';
+}
 
     // ensure there's a trailing slash
     $system_path = rtrim($system_path, '/').'/';
 
     // Is the system path correct?
-    if ( ! is_dir($system_path))
-    {
-        exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
-    }
+if ( ! is_dir($system_path)) {
+    exit(
+        "Your system folder path does not appear to be set correctly.
+        Please open the following file and correct this: ".
+        pathinfo(__FILE__, PATHINFO_BASENAME)
+    );
+}
 
 /*
  * -------------------------------------------------------------------
@@ -177,19 +189,18 @@ if (defined('ENVIRONMENT'))
 
 
     // The path to the "application" folder
-    if (is_dir($application_folder))
-    {
-        define('APPPATH', $application_folder.'/');
+if (is_dir($application_folder)) {
+    define('APPPATH', $application_folder.'/');
+} else {
+    if ( ! is_dir(BASEPATH.$application_folder.'/')) {
+        exit(
+            "Your application folder path does not appear to be set correctly.
+            Please open the following file and correct this: ".SELF
+        );
     }
-    else
-    {
-        if ( ! is_dir(BASEPATH.$application_folder.'/'))
-        {
-            exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
-        }
 
-        define('APPPATH', BASEPATH.$application_folder.'/');
-    }
+    define('APPPATH', BASEPATH.$application_folder.'/');
+}
 
 /*
  * --------------------------------------------------------------------
