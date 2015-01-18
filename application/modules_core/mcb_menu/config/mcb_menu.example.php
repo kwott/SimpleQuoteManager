@@ -1,5 +1,16 @@
 <?php
-
+/**
+ * Menu config
+ *
+ * PHP Version 5.4
+ *
+ * @category Config
+ * @package  SimpleQuoteManager
+ * @author   Pierre Rudloff <contact@rudloff.pro>
+ * @author   Damien Senger <mail@damiensenger.me>
+ * @license  GPL-3.0 http://www.gnu.org/licenses/gpl.html
+ * @link     https://github.com/kwott/SimpleQuoteManager
+ * */
 $config = array(
     'mcb_menu'  =>  array(
         'dashboard' =>  array(
@@ -60,7 +71,7 @@ $config = array(
                         'invoice_statuses'  =>  array(
                             'title'         =>  'invoice_statuses',
                             'href'          =>  'invoice_statuses/index',
-                            'global_admin'  =>  TRUE
+                            'global_admin'  =>  true
                         ),
                         'tax_rates' =>  array(
                             'title'         =>  'tax_rates',
@@ -89,7 +100,7 @@ $config = array(
                 'payments/payment_methods'  =>  array(
                     'title'         =>  'payment_methods',
                     'href'          =>  'payments/payment_methods',
-                    'global_admin'  =>  TRUE
+                    'global_admin'  =>  true
                 ),
                 'templates/index/type/payment_receipts' =>  array(
                     'title'         =>  'receipt_templates',
@@ -145,37 +156,37 @@ $config = array(
         'client_center' =>  array(
             'title'         =>  'client_center',
             'href'          =>  'client_center/admin',
-            'global_admin'  =>  TRUE
+            'global_admin'  =>  true
         ),
         'fields'    =>  array(
             'title'         =>  'custom_fields',
             'href'          =>  'fields/index',
-            'global_admin'  =>  TRUE
+            'global_admin'  =>  true
         ),
         'mcb_modules'   =>  array(
             'title'         =>  'custom_modules',
             'href'          =>  'mcb_modules/index',
-            'global_admin'  =>  TRUE
+            'global_admin'  =>  true
         ),
         'email_templates'   =>  array(
             'title'         =>  'email_templates',
             'href'          =>  'email_templates',
-            'global_admin'  =>  TRUE
+            'global_admin'  =>  true
         ),
         'invoice_templates' =>  array(
             'title'         =>  'invoice_templates',
             'href'          =>  'templates/index/type/invoices',
-            'global_admin'  =>  TRUE
+            'global_admin'  =>  true
         ),
         'settings'  =>  array(
             'title'         =>  'system_settings',
             'href'          =>  'settings/index',
-            'global_admin'  =>  TRUE
+            'global_admin'  =>  true
         ),
         'users' =>  array(
             'title'         =>  'user_accounts',
             'href'          =>  'users/index',
-            'global_admin'  =>  TRUE
+            'global_admin'  =>  true
         )
     )
 );
