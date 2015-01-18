@@ -1,6 +1,6 @@
 #SimpleQuoteManager
 
-![Logo SimpleQuoteManager](https://github.com/kwott/SimpleQuoteManager/blob/master/assets/style/img/logo-sqm/logo-sqm-350-150.png "SQM project logo")
+![Logo SimpleQuoteManager](https://github.com/kwott/SimpleQuoteManager/blob/master/assets/style/img/logo-sqm/logo-sqm.svg "SQM project logo")
 
 ##About
 **SimpleQuoteManager** is a simple, intuitive, free and open source web based invoice management system developed with freelancers in mind.
