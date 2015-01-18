@@ -469,7 +469,7 @@ $lang['adjust_stock'] = 'Ajuster le stock';
 $lang['choose_inventory']
     = 'Choisissez un produit de l\'inventaire ou ajoutez un produit ci-dessous';
 $lang['client_list'] = 'Liste des clients';
-$lang['client_statement'] = 'Déclaration du client';
+$lang['client_statement'] = 'Rapport client';
 $lang['include_closed_invoices'] = 'Inclure les factures closes';
 $lang['inventory'] = 'Inventaire';
 $lang['inventory_history'] = 'Historique de l\'inventaire';
