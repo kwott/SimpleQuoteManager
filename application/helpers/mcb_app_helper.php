@@ -8,4 +8,9 @@ function application_title() {
 
 }
 
+function application_logo() {
+    global $CFG;
+    return base_url().$CFG->item('application_logo');
+}
+
 ?>

@@ -70,7 +70,6 @@ class Dashboard extends Admin_Controller
             $data['quotes'] = $this->mdl_invoices->get_quotes();
 
         }
-        $data['application_logo'] = $CFG->item('application_logo');
 
         $this->load->view('dashboard', $data);
 
