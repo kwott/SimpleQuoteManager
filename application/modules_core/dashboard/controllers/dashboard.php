@@ -1,10 +1,12 @@
 <?php (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-class Dashboard extends Admin_Controller {
+class Dashboard extends Admin_Controller
+{
 
     public $widgets = array();
 
-    function __construct() {
+    function __construct()
+    {
 
         parent::__construct();
 
@@ -16,7 +18,8 @@ class Dashboard extends Admin_Controller {
 
     }
 
-    function index() {
+    function index()
+    {
         global $CFG;
 
         $this->_post_handler();
@@ -73,13 +76,14 @@ class Dashboard extends Admin_Controller {
 
     }
 
-    function show_custom_menu() {
+    function show_custom_menu()
+    {
 
         foreach ($this->mdl_mcb_modules->custom_modules as $module) {
 
             if ($module->module_enabled and isset($module->module_config['dashboard_menu'])) {
 
-                $this->load->view($module->module_config['dashboard_menu'], NULL, FALSE);
+                $this->load->view($module->module_config['dashboard_menu'], null, false);
 
             }
 
@@ -87,7 +91,8 @@ class Dashboard extends Admin_Controller {
 
     }
 
-    function show_widgets() {
+    function show_widgets()
+    {
 
         foreach ($this->mdl_mcb_modules->custom_modules as $module) {
 
@@ -101,21 +106,21 @@ class Dashboard extends Admin_Controller {
 
     }
 
-    function record_not_found() {
+    function record_not_found()
+    {
 
         $this->load->view('record_not_found');
 
     }
 
-    function _post_handler() {
+    function _post_handler()
+    {
 
         if ($this->input->post('btn_add_invoice')) {
 
             redirect('invoices/create');
 
-        }
-
-        elseif ($this->input->post('btn_email_reminders')) {
+        } elseif ($this->input->post('btn_email_reminders')) {
 
             redirect('mailer/invoice_mailer/overdue');
 
