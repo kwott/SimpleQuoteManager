@@ -38,7 +38,7 @@ class Mdl_Recover extends MY_Model {
                 $from = $user->email_address;
                 $to = $user->email_address;
                 $subject = $this->lang->line('password_recovery');
-                $email_body = $this->lang->line('password_recovery_email') . ' ';
+                $email_body = $this->lang->line('password_recovery_email') . '&nbsp;';
                 $email_body .= $password . '<br />' . anchor(site_url(), $this->lang->line('password_recovery_email_2'));
 
                 $this->mdl_mcb_data->set_session_data();
