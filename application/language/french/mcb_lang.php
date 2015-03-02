@@ -345,8 +345,8 @@ $lang['template_dir_not_writable']
     = 'Le répertoire des templates doit être accessible en écriture
         pour pouvoir utiliser l\'éditeur de templates.';
 $lang['template_name'] = 'Nom du template';
-$lang['this_item_has_been_deleted'] = 'Ce produit a été supprimé';
-$lang['this_item_has_been_saved'] = 'Ce produit a été enregistré';
+$lang['this_item_has_been_deleted'] = 'Cet élément a été supprimé';
+$lang['this_item_has_been_saved'] = 'Cet élément a été enregistré';
 $lang['thousands_separator'] = 'Séparateur de milliers';
 $lang['title'] = 'Titre';
 $lang['to'] = 'Pour';
