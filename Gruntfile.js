@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             },
             watch: {
                 mcb: {
-                    files: ['themes/mcb/css/*.css'],
+                    files: ['themes/mcb/css/*.css', '!themes/mcb/css/main.css'],
                     tasks: ['cssmin']
                 }
             },
