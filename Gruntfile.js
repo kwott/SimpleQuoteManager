@@ -23,7 +23,7 @@ module.exports = function (grunt) {
             },
             csslint: {
                 mcb: {
-                    src: ['themes/mcb/css/*.css']
+                    src: ['themes/mcb/css/*.css', '!themes/mcb/css/main.css']
                 }
             }
         }
