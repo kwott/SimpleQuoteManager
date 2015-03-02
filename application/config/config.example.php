@@ -407,7 +407,7 @@ $config['favicon'] = 'assets/style/img/logo-sqm/favicon.png';
 | Name of the theme folder.
 |
 */
-$config['theme'] = 'sqm';
+$config['theme'] = 'mcb';
 
 
 /* End of file config.php */
