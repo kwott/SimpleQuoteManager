@@ -312,6 +312,7 @@ class Mdl_Setup extends MY_Model {
             `client_notes` longtext CHARACTER SET utf8 COLLATE utf8_bin,
             `client_tax_id` varchar(25) NOT NULL DEFAULT '',
             `client_active` int(1) NOT NULL DEFAULT '1',
+            `client_user_id` int(11) NOT NULL,
             PRIMARY KEY (`client_id`)
             ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
 
@@ -393,6 +394,7 @@ class Mdl_Setup extends MY_Model {
             `inventory_unit_price` decimal(10,2) NOT NULL DEFAULT '0.00',
             `inventory_description` longtext,
             `inventory_track_stock` int(1) NOT NULL DEFAULT '0',
+            `inventory_user_id` int(11) NOT NULL,
             PRIMARY KEY (`inventory_id`),
             KEY `inventory_type_id` (`inventory_type_id`),
             KEY `inventory_tax_rate_id` (`inventory_tax_rate_id`)
@@ -413,6 +415,7 @@ class Mdl_Setup extends MY_Model {
                         "CREATE TABLE `mcb_inventory_types` (
             `inventory_type_id` int(11) NOT NULL AUTO_INCREMENT,
             `inventory_type` varchar(50) NOT NULL DEFAULT '',
+            `inventory_type_user_id` int(11) NOT NULL,
             PRIMARY KEY (`inventory_type_id`)
             ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
 
@@ -459,6 +462,7 @@ class Mdl_Setup extends MY_Model {
             `invoice_group_left_pad` int(2) NOT NULL DEFAULT '0',
             `invoice_group_prefix_year` int(1) NOT NULL DEFAULT '0',
             `invoice_group_prefix_month` int(1) NOT NULL DEFAULT '0',
+            `invoice_group_user_id` int(11) NOT NULL,
             PRIMARY KEY (`invoice_group_id`),
             KEY `invoice_group_next_id` (`invoice_group_next_id`),
             KEY `invoice_group_left_pad` (`invoice_group_left_pad`)
@@ -592,6 +596,7 @@ class Mdl_Setup extends MY_Model {
             `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT,
             `tax_rate_name` varchar(25) NOT NULL DEFAULT '',
             `tax_rate_percent` decimal(5,2) NOT NULL DEFAULT '0.00',
+            `tax_rate_user_id` int(11) NOT NULL,
             PRIMARY KEY (`tax_rate_id`)
             ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
 
