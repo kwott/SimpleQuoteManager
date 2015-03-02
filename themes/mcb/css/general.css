@@ -36,6 +36,9 @@ body {
     -moz-border-radius-topleft: 5px;
     -khtml-border-radius-topleft: 5px;
     -webkit-border-top-left-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 h3.title_black, h3.title_white { margin: 0 !important; }
 
