@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php echo $this->lang->line('myclientbase'); ?></title>
-        <link href="<?php echo themeFolder(); ?>/css/main.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="<?php echo base_url(); ?>themes/mcb/css/main.css" rel="stylesheet" type="text/css" media="screen" />
         <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/style/css/ie6.css" /><![endif]-->
         <!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/style/css/ie7.css" /><![endif]-->
         <link type="text/css" href="<?php echo base_url(); ?>assets/jquery/ui-themes/myclientbase/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
