@@ -608,4 +608,6 @@ $lang['default_apply_invoice_tax'] = 'Appliquer la taxe aux produits par défaut
 $lang['group_by'] = 'Grouper par';
 $lang['payment_entered'] = 'Un paiement de %s a été appliqué';
 
+/* NEW FOR SQM 0.1 */
+$lang['users'] = 'Utilisateurs';
 ?>
