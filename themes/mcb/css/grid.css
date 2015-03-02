@@ -28,7 +28,6 @@
 .grid_8,
 .grid_9,
 .grid_10 {
-    display:inline;
     float: left;
     position: relative;
     margin-left: 10px;
