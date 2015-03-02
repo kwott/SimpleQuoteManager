@@ -4,15 +4,15 @@ module.exports = function (grunt) {
     grunt.initConfig(
         {
             cssmin: {
-                combine: {
+                mcb: {
                     files: {
-                        'themes/sqm/css/main.css': ['themes/sqm/css/reset.css', 'themes/sqm/css/layout.css', 'themes/sqm/css/general.css', 'themes/sqm/css/grid.css', 'themes/sqm/css/messages.css', 'themes/sqm/css/pagination.css']
+                        'themes/mcb/css/main.css': ['themes/mcb/css/reset.css', 'themes/mcb/css/layout.css', 'themes/mcb/css/general.css', 'themes/mcb/css/grid.css', 'themes/mcb/css/messages.css', 'themes/mcb/css/pagination.css']
                     }
                 }
             },
             watch: {
-                styles: {
-                    files: ['themes/sqm/css/*.css'],
+                mcb: {
+                    files: ['themes/mcb/css/*.css'],
                     tasks: ['cssmin']
                 }
             },
@@ -22,8 +22,8 @@ module.exports = function (grunt) {
                 }
             },
             csslint: {
-                css: {
-                    src: ['themes/sqm/css/*.css']
+                mcb: {
+                    src: ['themes/mcb/css/*.css']
                 }
             }
         }
