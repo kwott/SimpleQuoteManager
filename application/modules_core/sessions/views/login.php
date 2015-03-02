@@ -13,8 +13,6 @@
     </head>
     <body>
 
-        <?php $this->load->view('dashboard/jquery_set_focus', array('id'=>'username')); ?>
-
         <div class="container_10" id="center_wrapper">
 
             <div class="grid_5 push_2" id="content_wrapper">
@@ -30,7 +28,7 @@
                         <form method="post" action="<?php echo site_url($this->uri->uri_string()); ?>">
                             <dl>
                                 <dt><label><?php echo $this->lang->line('username'); ?>: </label></dt>
-                                <dd><input type="text" value="" id="username" name="username" /></dd>
+                                <dd><input type="text" value="" id="username" autofocus name="username" /></dd>
                             </dl>
                             <dl>
                                 <dt><label><?php echo $this->lang->line('password'); ?>: </label></dt>

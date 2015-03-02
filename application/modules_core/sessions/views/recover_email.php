@@ -12,8 +12,6 @@
     </head>
     <body>
 
-        <?php $this->load->view('dashboard/jquery_set_focus', array('id'=>'username')); ?>
-
         <div class="container_10" id="center_wrapper">
 
             <div class="grid_5 push_2" id="content_wrapper">
