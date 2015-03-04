@@ -1,0 +1,3 @@
+[submodule "themes/kwott"]
+	path = themes/kwott
+	url = https://github.com/hiwelo/kwott-design.git
