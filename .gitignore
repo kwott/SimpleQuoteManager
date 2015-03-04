@@ -12,3 +12,4 @@ assets/style/dist/
 themes/sqm/css/main.css
 application/modules_core/mcb_menu/config/mcb_menu.php
 themes/mcb/css/main.css
+.sass-cache/
