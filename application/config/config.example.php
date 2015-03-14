@@ -11,7 +11,7 @@
  * @license  GPL-3.0 http://www.gnu.org/licenses/gpl.html
  * @link     https://github.com/kwott/SimpleQuoteManager
  * */
-if ( ! defined('BASEPATH')) {
+if (! defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
