@@ -20,8 +20,6 @@
                 ' - ', $this->lang->line($this->_module); ?></title>
             <link href="<?php echo themeFolder(); ?>/css/main.css"
                 rel="stylesheet" type="text/css" media="screen" />
-            <link href="<?php echo base_url(); ?>assets/style/css/superfish.css"
-                rel="stylesheet" type="text/css" media="screen" />
             <!--[if IE 6]><link rel="stylesheet" type="text/css"
                 media="screen"
                 href="<?php echo base_url(); ?>assets/style/css/ie6.css"
@@ -43,29 +41,9 @@
             <script src="<?php echo base_url();
                 ?>bower_components/jquery-maskedinput/src/jquery.maskedinput.js"
                 type="text/javascript"></script>
-            <script src="<?php echo base_url();
-                ?>bower_components/superfish/js/superfish.js"
-                type="text/javascript"></script>
-            <script src="<?php echo base_url();
-                ?>bower_components/superfish/js/supersubs.js"
-                type="text/javascript"></script>
             <link href='https://fonts.googleapis.com/css?family=Open+Sans'
                 rel='stylesheet' type='text/css' />
             <link href='<?php echo favicon(); ?>' rel='icon' />
-        <script>
-
-            $(document).ready(function(){
-                $("ul.sf-menu").supersubs({
-                    minWidth:    12,
-                    maxWidth:    38,
-                    extraWidth:  1
-                }).superfish();
-
-                                $( "input:submit.uibutton").button();
-
-            });
-
-        </script>
 
 <?php if (isset($header_insert)) {
     if (!is_array($header_insert)) {

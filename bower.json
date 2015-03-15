@@ -3,7 +3,6 @@
     "dependencies": {
         "jquery": "~1.11",
         "jquery-ui": "~1.11",
-        "superfish": "~1.5.0",
         "fullcalendar": "~2.2.6",
         "jquery-maskedinput": "~1.4.0"
     }
