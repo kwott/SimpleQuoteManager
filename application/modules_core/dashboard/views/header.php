@@ -78,7 +78,7 @@
 } ?>
 
         </head>
-        <body>
+        <body class="<?php echo $this->_module; ?>">
 
                 <div id="header_wrapper">
 

@@ -10,7 +10,7 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>bower_components/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>bower_components/jquery-ui/jquery-ui.min.js"></script>
     </head>
-    <body>
+    <body class="<?php echo $this->_module; ?>">
 
         <div class="container_10" id="center_wrapper">
 
