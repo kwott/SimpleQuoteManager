@@ -133,3 +133,10 @@ color: #ffffff;
 
 }
 
+#navigation li ul {
+    width: 14em;
+}
+
+.sf-menu li ul li ul {
+    margin-left: 14em;
+}

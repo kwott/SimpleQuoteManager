@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             cssmin: {
                 mcb: {
                     files: {
-                        'themes/mcb/css/main.css': ['themes/mcb/css/reset.css', 'themes/mcb/css/layout.css', 'themes/mcb/css/general.css', 'themes/mcb/css/grid.css', 'themes/mcb/css/messages.css', 'themes/mcb/css/pagination.css']
+                        'themes/mcb/css/main.css': ['themes/mcb/css/reset.css', 'themes/mcb/css/layout.css', 'themes/mcb/css/general.css', 'themes/mcb/css/grid.css', 'themes/mcb/css/messages.css', 'themes/mcb/css/pagination.css', 'themes/mcb/css/navigation.css']
                     }
                 }
             },
