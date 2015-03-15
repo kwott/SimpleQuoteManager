@@ -6,7 +6,19 @@
 **SimpleQuoteManager** is a simple, intuitive, free and open source web based invoice management system developed with freelancers in mind.
 
 ##Install
-You first need to use Bower and Grunt:
+First, you need to get the submodules:
+
+    git submodule init
+    git submodule update
+
+dompdf has some submodules too:
+
+    cd application/helpers/dompdf
+    git submodule init
+    git submodule update
+
+
+You then need to use Bower and Grunt:
 
     bower install
     npm install
@@ -24,6 +36,7 @@ Then edit these files according to your needs.
 You can use Git to get the latest version:
 
     git pull
+    git submodule update
 
 You then need to update the dependencies:
 

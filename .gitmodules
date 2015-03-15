@@ -1,3 +1,6 @@
 [submodule "themes/kwott"]
 	path = themes/kwott
 	url = https://github.com/hiwelo/kwott-design.git
+[submodule "application/helpers/dompdf"]
+	path = application/helpers/dompdf
+	url = https://github.com/dompdf/dompdf.git
