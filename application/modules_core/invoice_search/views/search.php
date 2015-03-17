@@ -29,9 +29,11 @@
 					<dt><label><?php echo $this->lang->line('clients'); ?>: </label></dt>
 					<dd>
 						<select name="client_id[]" id="client_id" multiple size="10" style="width: 400px;">
-							<?php foreach ($clients as $client) { ?>
-								<option value="<?php echo $client->client_id; ?>" <?php if ($this->mdl_invoice_search->form_value('client_id') == $client->client_id) { ?>selected="selected"<?php } ?>><?php echo $client->client_name; ?></option>
-							<?php } ?>
+        <?php foreach ($clients as $client) { ?>
+								<option value="<?php echo $client->client_id; ?>" <?php if ($this->mdl_invoice_search->form_value('client_id') == $client->client_id) { ?>selected="selected"<?php 
+} ?>><?php echo $client->client_name; ?></option>
+        <?php 
+} ?>
 						</select>
 					</dd>
 				</dl>
@@ -40,9 +42,11 @@
 					<dt><label><?php echo $this->lang->line('invoice_statuses'); ?>: </label></dt>
 					<dd>
 						<select name="invoice_status_id[]" id="invoice_status_id" multiple size="5" style="width: 400px;">
-							<?php foreach ($invoice_statuses as $invoice_status) { ?>
-								<option value="<?php echo $invoice_status->invoice_status_id; ?>" <?php if ($this->mdl_invoice_search->form_value('invoice_status_id') == $invoice_status->invoice_status_id) { ?>selected="selected"<?php } ?>><?php echo $invoice_status->invoice_status; ?></option>
-							<?php } ?>
+        <?php foreach ($invoice_statuses as $invoice_status) { ?>
+								<option value="<?php echo $invoice_status->invoice_status_id; ?>" <?php if ($this->mdl_invoice_search->form_value('invoice_status_id') == $invoice_status->invoice_status_id) { ?>selected="selected"<?php 
+} ?>><?php echo $invoice_status->invoice_status; ?></option>
+        <?php 
+} ?>
 						</select>
 					</dd>
 				</dl>

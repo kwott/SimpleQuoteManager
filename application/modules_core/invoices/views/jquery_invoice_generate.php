@@ -84,11 +84,16 @@
                 <select name="invoice_template" id="invoice_template">
                     <?php foreach ($templates as $template) { ?>
                     <?php if (uri_assoc('is_quote') or isset($invoice) and $invoice->invoice_is_quote) { ?>
-                    <option <?php if ($template == $default_quote_template) { ?>selected="selected"<?php } ?>><?php echo $template; ?></option>
-                    <?php } else { ?>
-                    <option <?php if ($template == $default_invoice_template) { ?>selected="selected"<?php } ?>><?php echo $template; ?></option>
-                    <?php } ?>
-                    <?php } ?>
+                    <option <?php if ($template == $default_quote_template) { ?>selected="selected"<?php 
+} ?>><?php echo $template; ?></option>
+                    <?php 
+} else { ?>
+                    <option <?php if ($template == $default_invoice_template) { ?>selected="selected"<?php 
+} ?>><?php echo $template; ?></option>
+                    <?php 
+} ?>
+                    <?php 
+} ?>
                 </select>
             </td>
         </tr>

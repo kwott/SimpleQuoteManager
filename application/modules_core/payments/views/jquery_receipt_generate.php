@@ -74,9 +74,11 @@
 			<td><?php echo $this->lang->line('template'); ?>: </td>
 			<td>
 				<select name="receipt_template" id="receipt_template">
-					<?php foreach ($templates as $template) { ?>
-					<option <?php if ($template == $this->mdl_mcb_data->setting('default_receipt_template')) { ?>selected="selected"<?php } ?>><?php echo $template; ?></option>
-					<?php } ?>
+        <?php foreach ($templates as $template) { ?>
+					<option <?php if ($template == $this->mdl_mcb_data->setting('default_receipt_template')) { ?>selected="selected"<?php 
+} ?>><?php echo $template; ?></option>
+        <?php 
+} ?>
 				</select>
 			</td>
 		</tr>

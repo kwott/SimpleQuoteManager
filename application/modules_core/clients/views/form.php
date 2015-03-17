@@ -14,21 +14,24 @@
 
 		<div class="section_wrapper">
 			<form method="post" action="<?php echo site_url($this->uri->uri_string()); ?>">
-			<?php if ($client) { ?>
+    <?php if ($client) { ?>
 			<h3 class="title_black"><?php echo $client->client_name; ?>
 				<span style="font-size: 60%;">
 				<input type="submit" name="btn_add_contact" class="uibutton" style="float: right; margin-top: 10px; margin-right: 10px;" value="<?php echo $this->lang->line('add_contact'); ?>" />
 				<?php if ($client->client_active) { ?>
                 <input type="submit" name="btn_add_invoice" class="uibutton" style="float: right; margin-top: 10px; margin-right: 10px;" value="<?php echo $this->lang->line('create_invoice'); ?>" />
 				<input type="submit" name="btn_add_quote" class="uibutton" style="float: right; margin-top: 10px; margin-right: 10px;" value="<?php echo $this->lang->line('create_quote'); ?>" />
-                <?php } ?>
+                <?php 
+} ?>
 				</span>
 			</h3>
-			<?php } else { ?>
+    <?php 
+} else { ?>
 			<h3 class="title_black"><?php echo $this->lang->line('client_form'); ?></h3>
-			<?php } ?>
+    <?php 
+} ?>
 			</form>
-			<?php $this->load->view('dashboard/system_messages'); ?>
+    <?php $this->load->view('dashboard/system_messages'); ?>
 
 			<div class="content toggle">
 
@@ -39,11 +42,12 @@
 					<ul>
 						<li><a href="#tab_client"><?php echo $this->lang->line('client'); ?></a></li>
 						<li><a href="#tab_settings"><?php echo $this->lang->line('settings'); ?></a></li>
-						<?php if ($client) { ?>
+        <?php if ($client) { ?>
 						<li><a href="#tab_contacts"><?php echo $this->lang->line('contacts'); ?></a></li>
 						<li><a href="#tab_quotes"><?php echo $this->lang->line('quotes'); ?></a></li>
 						<li><a href="#tab_invoices"><?php echo $this->lang->line('invoices'); ?></a></li>
-						<?php } ?>
+        <?php 
+} ?>
 						
 					</ul>
 
@@ -53,7 +57,8 @@
 							
 							<dl>
 								<dt><?php echo $this->lang->line('active_client'); ?>: </dt>
-								<dd><input type="checkbox" name="client_active" id="client_active" value="1" <?php if ($this->mdl_clients->form_value('client_active') or (!$_POST and !uri_assoc('client_id'))) { ?>checked="checked"<?php } ?> /></dd>
+								<dd><input type="checkbox" name="client_active" id="client_active" value="1" <?php if ($this->mdl_clients->form_value('client_active') or (!$_POST and !uri_assoc('client_id'))) { ?>checked="checked"<?php 
+} ?> /></dd>
 							</dl>
 
 							<dl>
@@ -128,7 +133,7 @@
 
 						</div>
 
-						<?php if ($client) { ?>
+        <?php if ($client) { ?>
 						<div class="right_box">
 
 							<dl>
@@ -150,15 +155,17 @@
 								<dd><?php echo nl2br($client->client_notes); ?></dd>
 							</dl>
 
-							<?php foreach ($custom_fields as $field) { ?>
+        <?php foreach ($custom_fields as $field) { ?>
 							<dl>
 								<dt><?php echo $field->field_name ?>: </dt>
 								<dd><input type="text" id="<?php echo $field->column_name; ?>" name="<?php echo $field->column_name; ?>" value="<?php echo $this->mdl_clients->form_value($field->column_name); ?>" /></dd>
 							</dl>
-							<?php } ?>
+        <?php 
+} ?>
 
 						</div>
-						<?php } ?>
+        <?php 
+} ?>
 
 						<div style="clear: both;">&nbsp;</div>
 
@@ -170,9 +177,11 @@
 							<dd>
 								<select name="client_settings[default_invoice_template]" id="default_invoice_template">
 									<option value=""></option>
-									<?php foreach ($invoice_templates as $template) { ?>
-									<option value="<?php echo $template; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_invoice_template') == $template) { ?>selected="selected"<?php } ?>><?php echo $template; ?></option>
-									<?php } ?>
+            <?php foreach ($invoice_templates as $template) { ?>
+									<option value="<?php echo $template; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_invoice_template') == $template) { ?>selected="selected"<?php 
+} ?>><?php echo $template; ?></option>
+            <?php 
+} ?>
 								</select>
 							</dd>
 						</dl>
@@ -182,9 +191,11 @@
 							<dd>
 								<select name="client_settings[default_quote_template]" id="default_invoice_template">
 									<option value=""></option>
-									<?php foreach ($invoice_templates as $template) { ?>
-									<option value="<?php echo $template; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_quote_template') == $template) { ?>selected="selected"<?php } ?>><?php echo $template; ?></option>
-									<?php } ?>
+            <?php foreach ($invoice_templates as $template) { ?>
+									<option value="<?php echo $template; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_quote_template') == $template) { ?>selected="selected"<?php 
+} ?>><?php echo $template; ?></option>
+            <?php 
+} ?>
 								</select>
 							</dd>
 						</dl>
@@ -194,9 +205,11 @@
 							<dd>
 								<select name="client_settings[default_invoice_group_id]" id="default_invoice_group_id">
 									<option value=""></option>
-									<?php foreach ($invoice_groups as $group) { ?>
-									<option value="<?php echo $group->invoice_group_id; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_invoice_group_id') == $group->invoice_group_id) { ?>selected="selected"<?php } ?>><?php echo $group->invoice_group_name; ?></option>
-									<?php } ?>
+            <?php foreach ($invoice_groups as $group) { ?>
+									<option value="<?php echo $group->invoice_group_id; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_invoice_group_id') == $group->invoice_group_id) { ?>selected="selected"<?php 
+} ?>><?php echo $group->invoice_group_name; ?></option>
+            <?php 
+} ?>
 								</select>
 							</dd>
 						</dl>
@@ -206,9 +219,11 @@
 							<dd>
 								<select name="client_settings[default_quote_group_id]" id="default_quote_group_id">
 									<option value=""></option>
-									<?php foreach ($invoice_groups as $group) { ?>
-									<option value="<?php echo $group->invoice_group_id; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_quote_group_id') == $group->invoice_group_id) { ?>selected="selected"<?php } ?>><?php echo $group->invoice_group_name; ?></option>
-									<?php } ?>
+            <?php foreach ($invoice_groups as $group) { ?>
+									<option value="<?php echo $group->invoice_group_id; ?>" <?php if ($this->mdl_mcb_client_data->setting('default_quote_group_id') == $group->invoice_group_id) { ?>selected="selected"<?php 
+} ?>><?php echo $group->invoice_group_name; ?></option>
+            <?php 
+} ?>
 								</select>
 							</dd>
 						</dl>
@@ -220,21 +235,22 @@
 
 					</div>
 
-					<?php if ($client) { ?>
+        <?php if ($client) { ?>
 
 					<div id="tab_contacts">
-						<?php $this->load->view('contact_table'); ?>
+        <?php $this->load->view('contact_table'); ?>
 					</div>
 
 					<div id="tab_quotes">
-						<?php $this->load->view('invoices/invoice_table', array('invoices'=>$quotes)); ?>
+        <?php $this->load->view('invoices/invoice_table', array('invoices'=>$quotes)); ?>
 					</div>
 
 					<div id="tab_invoices">
-						<?php $this->load->view('invoices/invoice_table', array('invoices'=>$invoices)); ?>
+        <?php $this->load->view('invoices/invoice_table', array('invoices'=>$invoices)); ?>
 					</div>
 
-					<?php } ?>
+        <?php 
+} ?>
 
 				</div>
 

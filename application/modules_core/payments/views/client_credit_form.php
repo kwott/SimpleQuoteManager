@@ -6,7 +6,7 @@
 
 		<h3 class="title_black"><?php echo $this->lang->line('enter_deposit'); ?></h3>
 
-		<?php $this->load->view('dashboard/system_messages'); ?>
+    <?php $this->load->view('dashboard/system_messages'); ?>
 
 		<div class="content toggle">
 
