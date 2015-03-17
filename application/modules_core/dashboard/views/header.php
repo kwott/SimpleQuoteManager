@@ -29,7 +29,8 @@
                 href="<?php echo base_url(); ?>assets/style/css/ie7.css"
             /><![endif]-->
             <script type="text/javascript"
-                src="<?php echo base_url(); ?>bower_components/jquery/dist/jquery.min.js">
+                src="<?php echo base_url();
+                ?>bower_components/jquery/dist/jquery.min.js">
             </script>
             <script src="<?php echo base_url();
                 ?>bower_components/jquery-maskedinput/src/jquery.maskedinput.js"
@@ -76,3 +77,4 @@
                 </div>
 
                 <div class="container_10" id="center_wrapper">
+                    <h1><?php echo $this->lang->line($this->_module); ?></h1>
