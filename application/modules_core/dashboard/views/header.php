@@ -33,7 +33,8 @@
                 ?>assets/jquery/ui-themes/myclientbase/jquery-ui-1.8.16.custom.css"
                 rel="stylesheet" />
             <script type="text/javascript"
-                src="<?php echo base_url(); ?>bower_components/jquery/dist/jquery.min.js">
+                src="<?php echo base_url();
+                ?>bower_components/jquery/dist/jquery.min.js">
             </script>
             <script type="text/javascript"
                 src="<?php echo base_url();
@@ -83,3 +84,4 @@
                 </div>
 
                 <div class="container_10" id="center_wrapper">
+                    <h1><?php echo $this->lang->line($this->_module); ?></h1>
