@@ -28,16 +28,9 @@
                 media="screen"
                 href="<?php echo base_url(); ?>assets/style/css/ie7.css"
             /><![endif]-->
-            <link type="text/css"
-                href="<?php echo base_url();
-                ?>assets/jquery/ui-themes/myclientbase/jquery-ui-1.8.16.custom.css"
-                rel="stylesheet" />
             <script type="text/javascript"
                 src="<?php echo base_url(); ?>bower_components/jquery/dist/jquery.min.js">
             </script>
-            <script type="text/javascript"
-                src="<?php echo base_url();
-                ?>bower_components/jquery-ui/jquery-ui.min.js"></script>
             <script src="<?php echo base_url();
                 ?>bower_components/jquery-maskedinput/src/jquery.maskedinput.js"
                 type="text/javascript"></script>

@@ -2,24 +2,6 @@
 
     $(function() {
 
-        $('#output_dialog').dialog({
-            modal: true,
-            draggable: false,
-            resizable: false,
-            autoOpen: false,
-            width: 400,
-            title: '<?php echo $this->lang->line('generate_invoice'); ?>',
-            buttons: {
-                '<?php echo $this->lang->line('generate'); ?>': function() {
-                    $(this).dialog('close');
-                    generate_invoice();
-                },
-                '<?php echo $this->lang->line('cancel'); ?>': function() {
-                    $(this).dialog('close');
-                }
-            }
-        });
-
         $('.output_link').click(function() {
 
             id_info = $(this).attr('id').split(':');

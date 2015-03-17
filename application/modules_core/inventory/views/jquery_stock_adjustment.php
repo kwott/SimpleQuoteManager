@@ -1,33 +1,14 @@
 <script type="text/javascript">
 
-	$(function() {
+        $(function() {
 
-		$('#stock_adjust_dialog').dialog({
-			modal: true,
-			draggable: false,
-			resizable: false,
-			autoOpen: false,
-			title: '<?php echo $this->lang->line('adjust_stock'); ?>',
-			buttons: {
-				'<?php echo $this->lang->line('submit'); ?>': function() {
-					$(this).dialog('close');
-					adjust_stock();
-				},
-				'<?php echo $this->lang->line('cancel'); ?>': function() {
-					$(this).dialog('close');
-				}
-			}
-		});
+                $('.stock_adjust_link').click(function() {
 
-		$('.stock_adjust_link').click(function() {
+                        inventory_id = $(this).attr('id');
 
-			inventory_id = $(this).attr('id');
+                });
 
-			$('#stock_adjust_dialog').dialog('open');
-
-		});
-
-		function adjust_stock() {
+                function adjust_stock() {
 
             $.post('<?php echo site_url('inventory/jquery_adjust_stock'); ?>', {
 
@@ -48,21 +29,21 @@
 
             });
 
-		}
+                }
 
-	});
+        });
 
 </script>
 
 <div id="stock_adjust_dialog">
-	<table style="width: 100%;">
-		<tr>
-			<td><?php echo $this->lang->line('quantity'); ?>: </td>
-			<td><input type="text" name="inventory_stock_quantity" id="inventory_stock_quantity" /></td>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;"><?php echo $this->lang->line('notes'); ?>: </td>
-			<td><input type="text" name="inventory_stock_notes" id="inventory_stock_notes" /></td>
-		</tr>
-	</table>
+        <table style="width: 100%;">
+                <tr>
+                        <td><?php echo $this->lang->line('quantity'); ?>: </td>
+                        <td><input type="text" name="inventory_stock_quantity" id="inventory_stock_quantity" /></td>
+                </tr>
+                <tr>
+                        <td style="vertical-align: top;"><?php echo $this->lang->line('notes'); ?>: </td>
+                        <td><input type="text" name="inventory_stock_notes" id="inventory_stock_notes" /></td>
+                </tr>
+        </table>
 </div>

@@ -1,4 +1,4 @@
-<?php $this->load->view('dashboard/header', array('header_insert'=>array('dashboard/jquery_date_picker','invoices/jquery_choose_client','invoices/jquery_client_ac'))); ?>
+<?php $this->load->view('dashboard/header', array('header_insert'=>array('invoices/jquery_choose_client'))); ?>
 
 <div class="grid_10" id="content_wrapper">
 
@@ -17,9 +17,9 @@
                 <dl>
                     <dt><label>* <?php echo $this->lang->line('client'); ?>: </label></dt>
                     <dd>
-						<input type="text" id="client_id_autocomplete_label" name="client_id_autocomplete_label" value="<?php echo $this->mdl_invoices->form_value('client_id_autocomplete_label'); ?>"/>
-						<input type="hidden" id="client_id_autocomplete_hidden" name="client_id" value="<?php echo $this->mdl_invoices->form_value('client_id'); ?>"/>
-					</dd>
+                        <input type="text" id="client_id_autocomplete_label" name="client_id_autocomplete_label" value="<?php echo $this->mdl_invoices->form_value('client_id_autocomplete_label'); ?>"/>
+                        <input type="hidden" id="client_id_autocomplete_hidden" name="client_id" value="<?php echo $this->mdl_invoices->form_value('client_id'); ?>"/>
+                    </dd>
                 </dl>
                 <dl>
                     <dt><label>* <?php echo $this->lang->line('group'); ?>: </label></dt>
